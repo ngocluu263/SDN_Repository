@@ -1,0 +1,35 @@
+Will run WCBench against ODL 5 time(s)
+Starting run 1 of 5
+OpenDaylight is already running, can't adjust processors
+ASHOK2
+Set MS_PER_TEST to 60000, TESTS_PER_SWITCH to 1, CBENCH_WARMUP to 0
+Running CBench against ODL on localhost:6633
+Collecting time-irrelevant stats
+Told ODL to stop. Waiting on it to do so...
+OpenDaylight has stopped.
+Pinning ODL to 1 processor(s)
+Pinning ODL to 1 processor(s)
+Issued `dropAllPacketsRpc on` command via Karaf shell to localhost:8101
+Running WCBench with 1 minute(s) run time
+TEST TEST
+Collecting pre-test stats
+Collecting post-test stats
+Told ODL to stop. Waiting on it to do so...
+OpenDaylight has stopped.
+Pinning ODL to 1 processor(s)
+Pinning ODL to 1 processor(s)
+Issued `dropAllPacketsRpc on` command via Karaf shell to localhost:8101
+Running WCBench with 1 minute(s) run time
+TEST TEST
+Collecting pre-test stats
+Collecting post-test stats
+Told ODL to stop. Waiting on it to do so...
+OpenDaylight has stopped.
+Pinning ODL to 1 processor(s)
+Pinning ODL to 1 processor(s)
+Issued `dropAllPacketsRpc on` command via Karaf shell to localhost:8101
+Running WCBench with 1 minute(s) run time
+TEST TEST
+Collecting pre-test stats
+Collecting post-test stats
+Told ODL to stop. Waiting on it to do so...

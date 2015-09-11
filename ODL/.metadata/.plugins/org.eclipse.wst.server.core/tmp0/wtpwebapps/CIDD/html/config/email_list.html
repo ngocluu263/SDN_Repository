@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CIDD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="../js/config/config_email.js"></script> 
+		<link href="../css/config/config_email.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="row">
+			<div class="col-sm-2 col-md-2 col-lg-2 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+				<label for="proj_name">Project Name</label>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-6 ">
+				<select id="proj_name"></select>
+			</div>
+		</div>
+		<div class="row" >
+			<h3 id="email_info">
+			</h3>
+			<div class="col-sm-10 col-md-10 col-lg-10" id="email_list">
+			</div>
+			<div class="col-sm-2 col-md-2 col-lg-2"  id="edit_email_list">
+				<div class="row" >
+					<button type="button" class="btn btn-primary" id="email_add_btn" data-toggle="modal" data-target="#email_list_add">Add</button>
+				</div>
+				<div class="row" >
+					<button type="button" class="btn btn-primary " id="email_rem_btn">Remove</button>
+				</div>
+			</div>		
+		</div>
+
+		<!-- Create Email popup -->
+		<div id="email_list_add" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content" id="email_modal">
+					<div class="modal-header" id="pop_up_header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Add to Email List</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row">
+								<div class="col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+									<input type="email" name="email" id="email_id" placeholder="Email id">
+									<!--<button type="button" id="add_user_mailid" onclick="add_another_mail_id()" > + </button>-->
+								</div>
+							</div>
+							<div class="row" id="another_mailId">
+							</div>
+						</form>	
+					</div>
+					<div class="modal-footer">
+						<span>	<button type="button" class="btn btn-primary" id="ok_button_pop_up" onclick="add_email_list()">Save</button>
+						</span> 
+						<span>	<button type="button" class="btn btn-primary" data-dismiss="modal" id="pop_up_close_btn">Cancel</button>
+						</span> 
+						<section id="pop_up_alerts">
+						</section>
+					</div>
+				</div> 
+			</div>
+		</div>
+	</body>
+</html>

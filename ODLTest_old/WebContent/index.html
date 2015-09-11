@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CIDD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="lib/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/login.css" rel="stylesheet">
+		<link href="css/pop_up.css" rel="stylesheet">
+	</head>
+	<body>
+		<script type="text/javascript" src="lib/js/jquery-1.9.1.min.js"></script>
+		<script src="lib/js/bootstrap.min.js"></script>
+		<script src="js/login.js"></script>
+		
+	<div id="wrapper">
+		
+		<div id="header">
+			<div class="container-fluid" >
+				<div class="row" id="login-header">
+					<div class="col-sm-1 col-md-1 col-lg-1">
+						<img src="images/CID2_White.png" class="img-responsive" alt="CID2 logo" id="cid_logo">
+					</div>
+					<div class="col-sm-10 col-md-10 col-lg-10">
+						<h2 id="header_title">Continuous Integration of Development and Deployment</h2>
+					</div>
+					<div class="col-sm-1 col-md-1 col-lg-1">
+						<img src="images/tel_logo_white.png" id="TEL_logo" class="img-responsive" alt="tataelxsi logo">
+					</div>
+				</div>
+			</div>
+		</div><!-- #header -->
+		<div id="content">
+		<div class="container-fluid">
+			<div class="row" id="login-body">
+				<div class="col-sm-8 col-md-8 col-lg-8 " id="login-image">
+					 <img id="settings_img" src="images/loginPage_image.png" > 
+				</div>
+				<div class="col-sm-4 col-md-4 col-lg-4" id="login-column">
+					<div  id="login-box">
+						<div class="row">
+							<div class=" col-sm-offset-2 col-md-offset-2 col-lgoffset-2">
+								<h3>
+									<span class="glyphicon glyphicon-user">Login</span>
+								</h3>
+									<form role="form" id="loginForm" action="javascript:login()" method="POST" >
+										<fieldset id="login_details">
+									<div class="form-group">
+										<div class="col-sm-10">
+											<label for="user_name">Username</label>
+								         	<input type="text" class="form-control" id="user_name" placeholder="Username">
+								      	</div>
+								   </div>
+								   <div class="form-group">
+										<div class="col-sm-10">
+										<label for="pass_word">Password</label>
+								         <input type="password" class="form-control" id="pass_word" placeholder="Password">
+								      	</div>
+								   </div>
+								   <div class="form-group">
+								      <div class=" col-sm-10">
+								         <button type="submit" class="btn btn-default btn-lg" id="login_button">Login</button>
+								         <a href="#"  data-toggle="modal" data-target="#forgot_pw" id="forgot_pw_link">Forgot Password?</a>
+								         <section id="errorMsg"  class=""><span style=" color: red;" id="errorLogin"></span></section> 
+								      </div>
+								   </div>
+								   	</fieldset>
+								</form>					
+							</div>
+						</div>
+					</div>
+						 <h6 id="contact_info">Contact us for any queries: cidadmin@tataelxsi.co.in</h6> 
+			  </div>
+			  
+			</div>
+		</div>
+		</div><!-- #content -->
+		
+		<div id="footer">
+			<div class="container-fluid" id="footer_div">
+				<!-- <h6 id="contact_text">Contact us for any queries: cidadmin@tataelxsi.co.in</h6> -->
+				<div id="login-footer">
+					<h6>©2015. Tataelxsi, Inc. ALL RIGHTS RESERVED.</h6>
+				</div>
+			</div>
+		</div><!-- #footer -->
+		
+	</div><!-- #wrapper -->
+<!-- Forgot password Popup -->		
+		 <div id="forgot_pw" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content" id="FP_modal">
+					<div class="modal-header" id="pop_up_header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Forgot Password</h4>
+					</div>
+					<div class="modal-body">
+						
+						<form class="form-horizontal" role="form">
+							<!-- <div class="form-group"> -->
+							
+							<div>
+							<section id="FP_alerts"><span id="FP_text">Please Enter the Username</span></section>
+							</div>
+							<div class="row">
+								<div class="col-sm-3 col-md-3 col-lg-3 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+									 <label for="userNameForForgotPwd">Username</label>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+					         		<input type="text" class="form-control" id="userNameForForgotPwd" placeholder="Username">
+					      		</div>
+					      	</div>	
+					   		<!-- </div> -->
+					   	</form>
+					</div>
+					<div class="modal-footer">
+						  <!-- <span class="col-sm-2 col-md-2 col-lg-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">  -->
+						<span>	<button type="button" class="btn btn-primary" id="ok_button_pop_up">OK</button>
+						 </span> 
+					 <!-- <span class="col-sm-2 col-md-2 col-lg-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">   -->
+						<span>	<button type="button" class="btn btn-primary" data-dismiss="modal" id="pop_up_close_btn">Cancel</button>
+						  </span> 
+						<!-- <div class="col-sm-12 col-md-12 col-lg-12" id="FP_alerts_bottom1"> -->
+							<section id="pop_up_alerts">
+							<!-- <span style=" color: red;" id="FP_text1"></span> -->
+							</section>
+						<!-- </div>-->
+					</div>
+				</div> 
+			</div>
+		</div> 
+	</body>
+</html>

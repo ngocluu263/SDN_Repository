@@ -1,0 +1,109 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>CIDD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/plan/plan_sprints.css" rel="stylesheet">
+	</head>
+	<body>
+		<script type="text/javascript" src="../js/plan/plan_sprints.js"></script> 
+		<div class="container-fluid">
+			<div class="row" id="spr_path">
+			</div>			
+			<div class="row" id="add_new_spr_row">
+				<div class="col-sm-11 col-md-11 col-lg-11" id="plan_spr_form">
+					<form class="form-horizontal" role="form">
+						<div class="col-sm-9 col-md-9 col-lg-9" id="sprint_details">
+							<div class="row" id="spr_row1">
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									<label for="sprint_name">Sprint Name</label>
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									<input type="hidden" class="form-control" id="sprint_id" placeholder="Sprint Id">
+									<input type="text" class="form-control" id="sprint_name" placeholder="Sprint Name">
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									<label for="sprint_item">Sprint Items</label>
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									<input type="text" class="form-control" id="sprint_item" placeholder="Sprint Items">
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									 <label for="sprint_status">Status</label>
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									<select id="sprint_status" >
+										<option value="Planned">Planned</option>
+										<option value="In Progress">In Progress</option>
+										<option value="Closed">Closed</option>
+									</select>							
+								</div>
+							</div>
+							<div class="row" id="spr_row2">
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									 <label for="spr_start_date">Start Date</label>
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									<input type="text" class="form-control" id="spr_start_date" placeholder="Start Date">
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									 <label for="spr_end_date">End Date</label>
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									<input type="text" class="form-control" id="spr_end_date" placeholder="End Date">
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									 <label for="sprint_dur">Duration</label>
+								</div>				
+								<div class="col-sm-1 col-md-1 col-lg-1">
+									<input type="text" class="form-control" id="sprint_dur">
+								</div>
+								<div class="col-sm-1 col-md-1 col-lg-1">
+									<span id="spr_dur_text">In Days</span>
+								</div>							
+							</div>
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-3" id="spr_origin">
+							<div class="row">
+								<div class="col-sm-4 col-md-4 col-lg-4">
+									 <label for="sprint_release">Release</label>
+								</div>
+								<div class="col-sm-8 col-md-8 col-lg-8">
+									<select id="sprint_release">
+										<option value="1">Release</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</form>	
+				</div>
+				<div class="col-sm-1 col-md-1 col-lg-1">
+					<div class="row" id="add_new_spr_btn">
+						<button type="button" class="btn btn-primary  col-sm-offset-3 col-md-offset-3 col-lg-offset-3" id="add_new_spr">Add New
+						</button>
+					</div>
+					<div class="row" id="edit_spr_btn">
+						<button type="button" class="btn btn-primary  col-sm-offset-3 col-md-offset-3 col-lg-offset-3" id="edit_spr">Edit
+						</button>
+					</div>
+					<div class="row" id="save_spr_btn">
+						<button type="button" class="btn btn-primary  col-sm-offset-3 col-md-offset-3 col-lg-offset-3" id="save_spr">Save
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="sprint_details_select">
+ 				<div class="col-sm-1 col-md-1 col-lg-1" id="display_userStory">
+					<button type="button" class="btn btn-default  col-sm-offset-3 col-md-offset-3 col-lg-offset-3" id="userStory_display_btn">User Story
+					</button>
+				</div>
+ 				<div class="col-sm-1 col-md-1 col-lg-1" id="display_spr_bugs">
+					<button type="button" class="btn btn-default  col-sm-offset-3 col-md-offset-3 col-lg-offset-3" id="spr_bug_display_btn">Bugs
+					</button>
+				</div>			
+			</div>
+			<div class="row" id="sprint_list">
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,140 @@
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+#header {
+	background: #188DCD; 
+	color:#FFF;
+	padding:10px;
+}
+#content {
+	/*padding-bottom:100px;*//* Height of the footer element */
+}
+#login-image{
+	margin:0px;
+	padding:0px;
+}
+#settings_img{
+	width:100%;
+}
+#footer {
+	background: #188DCD; 
+	width:100%;
+	/* height:100px; */
+	position:absolute;
+	bottom:0;
+	
+	color:#FFF;
+	margin:0px;
+}
+#footer_div{
+	padding: 0px !important;
+}
+#login-footer{
+	background: #188DCD;
+	text-align: center;
+	/* padding-right: 0px !important;
+	padding-left: 0px !important; */
+}
+#contact_text{
+	text-align: right;
+	background: white;
+	color:#000;
+}
+#login-body{
+	position:relative;
+}
+#login-column{
+	/* vertical-align: middle; */
+	/* top:100px; */
+	top:33%;
+}
+#login-box{
+	background: #188DCD;
+	//background: #FFFFFF;
+	box-shadow: 2px 2px 2px #BABBD2;
+	padding-bottom: 10px;	
+}
+#user_name{
+	background : #FFFFFF;
+}
+#pass_word{
+	background : #FFFFFF;
+}
+#header_title{
+	text-align: center !important;
+}
+#TEL_logo{
+	/* padding-top: 13px;*/
+}
+#login_button{
+	background-color : #FFFFFF; 
+	border-radius: 10px;
+	/* width:120px; */
+	margin-bottom: 10px !important;
+	margin-top: 10px !important;
+	padding: 5px;
+	//color:#FFF;
+}
+#errorMsg {
+	display: none;
+	background: #FFC none repeat scroll 0% 0%;
+	margin-top: 2%;
+	padding: 2%;
+	border-radius: 7px;
+	text-align: center;
+	font-size:12px;
+	color: #F00;
+}
+#forgot_pw{
+	
+
+}
+#forgot_pw_link{
+	color:#fff !important;
+}
+/* #forgot_pw_header{
+	background-color : #188DCD;
+	color:#FFF;
+	text-align:center;
+}
+#forgot_pw_close_btn{
+	background : #EDECEA;
+	color:#000;
+	border-radius: 20px;
+	width:30%;
+}
+#ok_button_forgot_pwd{
+	background-color : #188DCD;
+	border-radius: 20px;
+	width:30%;
+} */
+#contact_us_link{
+	bottom: 0px;
+	position : fixed;
+}
+#FP_alerts{
+	/* display: none; */
+	/* background: #FFC none repeat scroll 0% 0%; */
+	/* margin-top: 2%; */
+	font-weight: bold;
+	padding: 2%;
+	border-radius: 10px;
+	text-align: center;
+	/* font-size: 12px; */
+	/* color: black; */
+	margin-bottom: 20px;
+}
+
+#FP_modal{
+	width: 60%;
+}
+/* #cid_logo{
+	width: 10%;
+} */

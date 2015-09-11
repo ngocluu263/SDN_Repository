@@ -1,0 +1,59 @@
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+#header {
+	background: #188DCD; 
+	color:#FFF;
+	padding:10px;
+}
+#footer {
+	background: #188DCD; 
+	width:100%;
+	position:absolute;
+	bottom:0;
+	color:#FFF;
+	margin:0px;
+}
+#footer_div{
+	padding: 0px !important;
+}
+#login-footer{
+	background: #188DCD;
+	text-align: center;
+}
+#header_title{
+	text-align: center !important;
+}
+#tabs{
+	float: none;
+}
+#tabs >li{
+	width:14%;
+	border:1px solid black;
+	border-radius: 5px;
+	text-align: center;
+	background:#f6f6f6;
+	color:#000;
+	font-weight: bold;
+}
+.cp_logout{
+	border:none !important;
+	font-weight: normal;
+}
+#change_pw_uname,#change_pw_cur_pw,#change_pw_new_pw{
+	margin-top: 10px;
+}
+#user_acc{
+	color: #337ab7 !important;
+	padding: 10px 15px;
+	padding-bottom: 32px;
+}
+#page_contents{
+	margin:20px;
+}

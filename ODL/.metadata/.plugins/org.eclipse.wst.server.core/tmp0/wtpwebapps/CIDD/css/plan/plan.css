@@ -1,0 +1,18 @@
+#plan_menu_list > li > a.active{
+	background-color:#337ab7;
+    color:#fff;
+    line-height:25px;
+	border-radius: 5px;
+    border: 1px solid black;
+}
+#plan_menu_list >li > a{
+    border: 1px solid black;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+#dashboard_nav:hover #dashboard_hover{
+    visibility:visible;
+}

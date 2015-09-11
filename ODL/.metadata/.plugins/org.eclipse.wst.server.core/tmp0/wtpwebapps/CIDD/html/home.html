@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CIDD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../lib/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/home.css" rel="stylesheet">
+		<link rel="stylesheet"  href="../lib/css/jquery-ui.css">
+		<link href="../css/pop_up.css" rel="stylesheet">
+	</head>
+	<body>
+		<script type="text/javascript" src="../lib/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../lib/js/jquery-ui.js"></script>
+		<script type="text/javascript" src="../lib/js/highcharts.js"></script>
+		<script type="text/javascript" src="../lib/js/fusioncharts.js"></script>
+		<script type="text/javascript" src="../lib/js/fusioncharts.charts.js"></script>
+		<script type="text/javascript" src="../lib/js/fusioncharts.widgets.js"></script>
+		<script type="text/javascript" src="../lib/js/fusioncharts.gantt.js"></script>
+		<script src="../js/home.js"></script>
+		<script src="../js/change_password.js"></script>
+		<script src="../js/logout.js"></script>
+		<div id="wrapper">
+			<div id="header">
+				<div class="container-fluid" >
+					<div class="row" id="login-header">
+						<div class="col-sm-1 col-md-1 col-lg-1">
+							<img src="../images/CID2_White.png" class="img-responsive" alt="CID2 logo" id="cid_logo">
+						</div> 
+						<div class="col-sm-10 col-md-10 col-lg-10">
+							<h2 id="header_title">Continuous Integration of Development and Deployment</h2>
+						</div>
+						 <div class="col-sm-1 col-md-1 col-lg-1">
+							<img src="../images/tel_logo_white.png" id="TEL_logo" class="img-responsive" alt="tataelxsi logo">
+						</div> 
+					</div>
+				</div>
+			</div><!-- #header -->
+			<div id="content">			
+				<nav class="navbar" >
+					<div class="container-fluid" >
+						<ul class="nav nav-pills nav-tabs" id="tabs">
+							<li class="active" id="help"><a href="javascript:void(0)" >Help</a></li>
+							<li id="config"><a href="javascript:void(0)">Configuration</a></li>
+							<li id="plan"><a href="javascript:void(0)">Plan</a></li>
+							<li id="execute"><a href="javascript:void(0)">Execute</a></li>
+							<li id="script_gen"><a href="javascript:void(0)">Script Generator</a></li>
+							<li id="dashboard"><a href="javascript:void(0)">Dashboard</a></li>
+							<li class="dropdown dropdown-toggle" id="user_acc" data-toggle="dropdown">User Account <span class="caret"></span>
+								<ul class="dropdown-menu">
+									<li> <a href="#change_password" data-toggle="modal"  data-target="#change_password" id="CP1"><span class="glyphicon glyphicon-user"></span>Change Password</a> 
+									</li>
+									<li>  <a href="#" id="logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+								</ul> 
+							</li>
+						</ul>
+					</div>
+				</nav>
+
+				<div class="row" id="page_contents">
+				</div>
+			</div><!-- #content -->
+			<div id="footer">
+				<div class="container-fluid" id="footer_div">
+					<div id="login-footer">
+						<h6>©2015. Tataelxsi, Inc. ALL RIGHTS RESERVED.</h6>
+					</div>
+				</div>
+			</div><!-- #footer -->
+		</div><!-- #wrapper -->
+	
+	<!--  Change Password  -->
+		<div id="change_password" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content" id="CP_modal">
+					<div class="modal-header" id="pop_up_header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Change Password</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal" role="form">
+							<div class="row" id="change_pw_uname">
+								<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+									 <label for="uname">Username</label>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<input type="text" class="form-control" id="uname" placeholder="Username">
+								</div>
+							</div>	
+							<div class="row" id="change_pw_cur_pw">
+								<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+									 <label for="currPwd">Current Password</label>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<input type="password" class="form-control" id="currPwd" placeholder="Current Password">
+								</div>
+							</div>	
+							<div class="row" id="change_pw_new_pw">
+								<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+									 <label for="newPwd">New Password</label>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<input type="password" class="form-control" id="newPwd" placeholder="New Password">
+								</div>
+							</div>	
+						</form>	
+					</div>
+					<div class="modal-footer">
+						<span>	<button type="button" class="btn btn-primary" id="ok_button_pop_up" onclick="updatepassword()">Update</button>
+						 </span> 
+						<span>	<button type="button" class="btn btn-primary" data-dismiss="modal" id="pop_up_close_btn">Cancel</button>
+						</span> 
+						<section id="pop_up_alerts">
+						</section>
+					</div>
+				</div> 
+			</div>
+		</div> 		
+	</body>
+</html>

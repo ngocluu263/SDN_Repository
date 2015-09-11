@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CIDD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="../js/config/config_servers.js"></script> 
+		<link href="../css/config/config_servers.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="row">
+			<div class="col-sm-10 col-md-10 col-lg-10" id="config_blocks">
+			<h3 id="server_info"></h3>
+				<div class="row">
+					<div class="col-sm-5 col-md-5 col-lg-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" id="version_control">
+						<form class="form-horizontal" role="form">
+							<fieldset>
+								<legend>Version Control</legend>
+								<div class="row" id="tool">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="ver_cntrl_tool">Tool</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<select id="ver_cntrl_tool">
+											<option>None</option>
+											<option>Git</option>
+											<option>SVN</option>
+											<option>CVS</option>
+											<option>Clearence</option>
+										</select>
+									</div>
+								</div>	
+								<div class="row" id="ip_addr">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										 <label for="ver_cntrl_ip">IP</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="ver_cntrl_ip" placeholder="IP">
+									</div>
+								</div>	
+								<div class="row" id="user">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="ver_cntrl_user">Username</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="ver_cntrl_user" placeholder="Username">
+									</div>
+								</div>	
+								<div class="row" id="password">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="ver_cntrl_password">Password</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="ver_cntrl_password" placeholder="Password">
+									</div>
+								</div>	
+								<div class="row" id="tool_path">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="ver_cntrl_path">Path</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="ver_cntrl_path" placeholder="Path">
+									</div>
+								</div>
+								<div id="check_servers_btn">
+									<hr>
+									<button type="button" class="btn btn-default" id="ver_cntrl_chk_btn"  onclick="version_control_check()">Check
+									</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div class="col-sm-5 col-md-5 col-lg-5 " id="continuous_int">
+						<form class="form-horizontal" role="form">
+							<fieldset>
+								<legend>Continuous Integration</legend>			
+								<div class="row" id="tool">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="cont_intr_tool">Tool</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<select id="cont_intr_tool">
+											<option>None</option>
+											<option>CI</option>
+											<option>Jenkins</option>
+											<option>Bamboo</option>
+										</select>
+									</div>
+								</div>	
+								<div class="row" id="ip_addr">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="continuous_int_ip">IP</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="continuous_int_ip" placeholder="IP">
+									</div>
+								</div>	
+								<div class="row" id="user">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="continuous_int_user">Username</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="continuous_int_user" placeholder="Username">
+									</div>
+								</div>	
+								<div class="row" id="password">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="continuous_int_password">Password</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="continuous_int_password" placeholder="Password">
+									</div>
+								</div>	
+								<div class="row" id="tool_path">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="continuous_int_path">Path</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="continuous_int_path" placeholder="Path">
+									</div>
+								</div>
+								<div id="check_servers_btn">
+									<hr>
+									<button type="button" class="btn btn-default" id="continuous_int_btn" onclick="continuous_int_check()">Check</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5 col-md-5 col-lg-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" id="test_case_manage">
+						<form class="form-horizontal" role="form">
+							<fieldset>
+								<legend>Test Case Management</legend>			
+								<div class="row" id="tool">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="tool">Tool</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<select id="test_case_mgn_tool">
+											<option>None</option>
+											<option>Excel</option>
+											<option>Testlink</option>
+											<option>Silkcentral</option>
+										</select>
+									</div>
+								</div>	
+								<div class="row" id="ip_addr">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="test_case_mgt_ip">IP</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="test_case_mgt_ip" placeholder="IP">
+									</div>
+								</div>	
+								<div class="row" id="user">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="test_case_mgt_user">Username</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="test_case_mgt_user" placeholder="Username">
+									</div>
+								</div>	
+								<div class="row" id="password">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="test_case_mgt_password">Password</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="test_case_mgt_password" placeholder="Password">
+									</div>
+								</div>	
+								<div class="row" id="tool_path">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="test_case_mgt_path">Path</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="test_case_mgt_path" placeholder="Path">
+									</div>
+								</div>
+								<div id="check_servers_btn">
+									<hr>
+									<button type="button" class="btn btn-default" id="test_case_mgt_btn" onclick="test_case_mgt_check()">Check
+									</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div class="col-sm-5 col-md-5 col-lg-5 " id="bug_manage">
+						<form class="form-horizontal" role="form">
+							<fieldset>
+								<legend>Bug Management</legend>			
+								<div class="row" id="tool">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="tool">Tool</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<select id="bug_mgn_tool">
+											<option>None</option>
+											<option>Jira</option>
+											<option>Bugzilla</option>
+											<option>Clearquest</option>
+										</select>
+									</div>
+								</div>	
+								<div class="row" id="ip_addr">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="bug_manage_ip">IP</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="bug_manage_ip" placeholder="IP">
+									</div>
+								</div>	
+								<div class="row" id="user">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="bug_manage_user">Username</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="bug_manage_user" placeholder="Username">
+									</div>
+								</div>	
+								<div class="row" id="password">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="bug_manage_password">Password</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="bug_manage_password" placeholder="Password">
+									</div>
+								</div>	
+								<div class="row" id="tool_path">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="bug_manage_path">Path</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="bug_manage_path" placeholder="Path">
+									</div>
+								</div>
+								<div id="check_servers_btn">
+									<hr>
+									<button type="button" class="btn btn-default" id="bug_manage_btn" onclick="bug_mgt_check()">Check
+									</button>
+								</div>
+							</fieldset>		
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5 col-md-5 col-lg-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" id="code_analysis">
+						<form class="form-horizontal" role="form">
+							<fieldset>
+								<legend>Code Analysis</legend>			
+								<div class="row" id="tool">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="tool">Tool</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<select id="code_analysis_tool">
+											<option>None</option>
+											<option>CPP check</option>
+											<option>Klockwork</option>
+											<option>Findbugs</option>
+											<option>Sonarqube</option>
+										</select>
+									</div>
+								</div>	
+								<div class="row" id="ip_addr">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="code_analysis_ip">IP</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="code_analysis_ip" placeholder="IP">
+									</div>
+								</div>	
+								<div class="row" id="user">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="code_analysis_user">Username</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="code_analysis_user" placeholder="Username">
+									</div>
+								</div>	
+								<div class="row" id="password">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="code_analysis_password">Password</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="code_analysis_password" placeholder="Password">
+									</div>
+								</div>	
+								<div class="row" id="tool_path">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="code_analysis_path">Path</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="code_analysis_path" placeholder="Path">
+									</div>
+								</div>
+								<div id="check_servers_btn">
+									<hr>
+									<button type="button" class="btn btn-default" id="code_analysis_btn" onclick="code_analysis_check()">Check
+									</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div class="col-sm-5 col-md-5 col-lg-5 " id="code_coverage">
+						<form class="form-horizontal" role="form">
+							<fieldset>
+								<legend>Code Coverage</legend>			
+								<div class="row" id="tool">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="tool">Tool</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<select id="code_cover_tool">
+											<option>None</option>
+											<option>GCon</option>
+											<option>Jacoco</option>
+										</select>
+									</div>
+								</div>	
+								<div class="row" id="ip_addr">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="code_coverage_ip">IP</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="code_coverage_ip" placeholder="IP">
+									</div>
+								</div>	
+								<div class="row" id="user">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="code_coverage_user">Username</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="code_coverage_user" placeholder="Username">
+									</div>
+								</div>	
+								<div class="row" id="password">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="code_coverage_password">Password</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="code_coverage_password" placeholder="Password">
+									</div>
+								</div>	
+								<div class="row" id="tool_path">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="code_coverage_path">Path</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="code_coverage_path" placeholder="Path">
+									</div>
+								</div>
+								<div id="check_servers_btn">
+									<hr>
+									<button type="button" class="btn btn-default" id="code_coverage_btn" onclick="code_coverage_check()">Check
+									</button>
+								</div>
+							</fieldset>		
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5 col-md-5 col-lg-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" id="unit_test">
+						<form class="form-horizontal" role="form">
+							<fieldset>
+								<legend>Unit Test</legend>			
+								<div class="row" id="tool">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="tool">Tool</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<select id="unit_test_tool">
+											<option>None</option>
+											<option>GTest</option>
+											<option>Junit</option>
+										</select>
+									</div>
+								</div>	
+								<div class="row" id="ip_addr">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="unit_test_ip">IP</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="unit_test_ip" placeholder="IP">
+									</div>
+								</div>	
+								<div class="row" id="user">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="unit_test_user">Username</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="unit_test_user" placeholder="Username">
+									</div>
+								</div>	
+								<div class="row" id="password">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="unit_test_password">Password</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="unit_test_password" placeholder="Password">
+									</div>
+								</div>	
+								<div class="row" id="tool_path">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="unit_test_path">Path</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="unit_test_path" placeholder="Path">
+									</div>
+								</div>
+								<div id="check_servers_btn">
+									<hr>
+									<button type="button" class="btn btn-default" id="unit_test_btn" onclick="unit_test_check()">Check
+									</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div class="col-sm-5 col-md-5 col-lg-5 " id="other_tools">
+						<form class="form-horizontal" role="form">
+							<fieldset>
+								<legend>Other Tools</legend>			
+								<div class="row" id="tool">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="tool">Tool</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<select id="other_tool">
+											<option>None</option>
+											<option>Robot</option>
+										</select>
+									</div>
+								</div>	
+								<div class="row" id="ip_addr">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="other_tools_ip">IP</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="other_tools_ip" placeholder="IP">
+									</div>
+								</div>	
+								<div class="row" id="user">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="other_tools_user">Username</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="other_tools_user" placeholder="Username">
+									</div>
+								</div>	
+								<div class="row" id="password">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="other_tools_password">Password</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="other_tools_password" placeholder="Password">
+									</div>
+								</div>	
+								<div class="row" id="tool_path">
+									<div class="col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+										<label for="other_tools_path">Path</label>
+									</div>
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<input type="text" class="form-control" id="other_tools_path" placeholder="Path">
+									</div>
+								</div>
+								<div id="check_servers_btn">
+									<hr>
+									<button type="button" class="btn btn-default" id="other_tools_btn" onclick="other_tool_check()">Check
+									</button>
+								</div>
+							</fieldset>		
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2 col-md-2 col-lg-2 ">
+				<div id="config_side_bar" >
+					<button type="button" class="btn btn-default" id="edit_server_config">Edit</button>
+					<button type="button" class="btn btn-default" id="save_server_config">Save</button>
+					<button type="button" class="btn btn-default" id="cancel_server_config">Cancel</button>
+				</div>
+			</div>	
+		</div>
+	</body>
+</html>

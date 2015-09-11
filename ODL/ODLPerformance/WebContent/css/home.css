@@ -1,0 +1,90 @@
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+#header {
+	background: #188DCD; 
+	color:#FFF;
+	padding:10px;
+}
+#footer {
+	background: #188DCD; 
+	width:100%;
+	position:absolute;
+	bottom:0;
+	color:#FFF;
+	margin:0px;
+	text-align: center;
+}
+#footer_div{
+	padding: 0px !important;
+}
+#login-footer{
+	background: #188DCD;
+	text-align: center;
+}
+#header_title{
+	text-align: center !important;
+}
+select{
+	margin-top: 10px;
+	min-height: 34px;
+	width: 100%;
+}
+label, input{
+	margin-top: 10px;
+}
+#start_odl,#stop_odl{
+	width: 100px;
+	text-align: center; 
+	border-radius: 15px;
+	margin-top: 20px;
+}
+.odl_row{
+	border:1px solid rgba(246, 237, 237, 1);	
+	margin:20px;
+	padding:20px;
+}
+table{
+	width:100%;
+	margin-top: 20px;
+}
+th{
+	width:20%;
+	padding-bottom: 10px;
+	padding-top :10px;
+	background-color:#52A2D8;
+}
+td{
+	width:20%;
+	padding-bottom: 10px;
+	padding-top :10px;
+}
+td:first-child, th:first-child { 
+    width:10%;
+}
+button{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+tr:nth-child(even) {
+	background-color:#fff;
+}
+tr:nth-child(odd) {
+	background-color: #D8E3EC;
+}
+#chartContainer, #TableContainer{
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	overflow-y: scroll; 
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}

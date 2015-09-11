@@ -1,0 +1,23 @@
+#pop_up_header{
+	background-color : #188DCD;
+	color:#FFF;
+	text-align:center;
+}
+#pop_up_close_btn{
+	background : #EDECEA;
+	color:#000;
+	border-radius: 20px;
+	width:30%;
+}
+#ok_button_pop_up{
+	background-color : #188DCD;
+	border-radius: 20px;
+	width:30%;
+}
+#pop_up_alerts{
+	background: #FFC none repeat scroll 0% 0%;
+	padding: 2%;
+	border-radius: 10px;
+	text-align: center;
+	color: #F00;
+}

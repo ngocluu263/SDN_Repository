@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>CIDD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/plan/plan_tasks.css" rel="stylesheet">
+	</head>
+	<body>
+		<script type="text/javascript" src="../js/plan/plan_tasks.js"></script> 
+ 		<div class="container-fluid">
+			<div class="row" id="task_path">
+			</div>			
+			<div class="row" id="add_new_task_row">
+				<div class="col-sm-11 col-md-11 col-lg-11" id="task_form">
+					<form class="form-horizontal" role="form">
+						<div class="col-sm-9 col-md-9 col-lg-9" id="task_details">
+							<div class="row" id="task_desc_row">
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									<label for="task_desc">Task Description</label>
+								</div>
+								<div class="col-sm-10 col-md-10 col-lg-10 ">
+									<input type="hidden" class="form-control" id="task_id" placeholder="Task ID">
+									<textarea rows="2" id="task_desc" placeholder="Task Description">
+									</textarea>
+								</div>						
+							</div>
+							<div class="row" id="task_row1">
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									 <label for="task_start_date">Start Date</label>
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2 ">
+									<input type="text" class="form-control" id="task_start_date" placeholder="Start Date">
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									 <label for="task_end_date">End Date</label>
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2 ">
+									<input type="text" class="form-control" id="task_end_date" placeholder="End Date">
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									 <label for="task_duration">Duration</label>
+								</div>						
+								<div class="col-sm-1 col-md-1 col-lg-1">
+									<input type="text" class="form-control" id="task_duration">
+								</div>
+								<div class="col-sm-1 col-md-1 col-lg-1">
+									<span id="rel_dur_text">In Days</span>
+								</div>							
+							</div>
+							<div class="row" id="task_row2">
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									 <label for="task_status">Status</label>
+								</div>
+								<div class="col-sm-2 col-md-2 col-lg-2">
+									<select id="task_status" >
+										<option value="Any">Any</option>
+										<option value="None">None</option>
+										<option value="Todo">Todo</option>
+										<option value="On Going">On Going</option>
+										<option value="Review">Review</option>
+										<option value="Done">Done</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-3" id="task_origin">
+							<div class="row">
+								<div class="col-sm-4 col-md-4 col-lg-4">
+									 <label for="task_sprint">Sprint</label>
+								</div>
+								<div class="col-sm-8 col-md-8 col-lg-8">
+									<select id="task_sprint"></select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 col-md-4 col-lg-4">
+									 <label for="task_user_story">UserStory</label>
+								</div>
+								<div class="col-sm-8 col-md-8 col-lg-8">
+									<select id="task_user_story"></select>
+								</div>
+							</div>
+						</div>
+					</form>	
+				</div>
+				<div class="col-sm-1 col-md-1 col-lg-1">
+					<div class="row" id="add_new_task_btn">
+						<button type="button" class="btn btn-primary  col-sm-offset-3 col-md-offset-3 col-lg-offset-3" id="add_new_task">Add New
+						</button>
+					</div>
+					<div class="row" id="edit_task_btn">
+						<button type="button" class="btn btn-primary  col-sm-offset-3 col-md-offset-3 col-lg-offset-3" id="edit_task">Edit
+						</button>
+					</div>					
+					<div class="row" id="save_task_btn">
+						<button type="button" class="btn btn-primary  col-sm-offset-3 col-md-offset-3 col-lg-offset-3" id="save_task">Save
+						</button>
+					</div>				
+				</div>
+			</div>
+			<div class="row" id="task_details_select">
+				<div class="col-sm-1 col-md-1 col-lg-1" id="display_tests_task">
+					<button type="button" class="btn btn-default  col-sm-offset-3 col-md-offset-3 col-lg-offset-3" id="task_test_display_btn">Test
+					</button>
+				</div>				
+				<div class="col-sm-1 col-md-1 col-lg-1" id="display_bug_task">
+					<button type="button" class="btn btn-default  col-sm-offset-3 col-md-offset-3 col-lg-offset-3" id="task_bug_display_btn">Bug
+					</button>
+				</div>			
+			</div>			
+			<div class="row" id="task_list">
+			</div>
+		</div>
+	</body>
+</html>
