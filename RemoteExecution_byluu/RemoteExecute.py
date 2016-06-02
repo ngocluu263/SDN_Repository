@@ -31,7 +31,7 @@ print "copied successfully!"
             # remotelog.write(stdout.channel.recv(1024)) 
             # print '-------------------------------'
 
-stdin2,stdout2,stderr2=ssh.exec_command('git name-rev --name-only HEAD')
+stdin2,stdout2,stderr2=ssh.exec_command('sudo cd /root/cci-recite/ && sudo git name-rev --name-only HEAD')
 r=stdout2.readlines()
 print r
 
