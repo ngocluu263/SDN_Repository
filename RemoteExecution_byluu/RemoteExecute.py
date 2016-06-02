@@ -12,12 +12,12 @@ ssh.connect(config.vmip,port=22, username=config.vmusername, password=config.vmp
 
 print "connected successfully!"
 exitcode=1
-# sftp = ssh.open_sftp()
-# print sftp
-# sftp.put('c://RemoteExecution/runODLTest.py','/home/vagrant/wcbench/runODLTest.py' )
+sftp = ssh.open_sftp()
+print sftp
+sftp.put('results.csv','/home/pi/results.csv' )
 # sftp.put('c://RemoteExecution/odltestconfig.py','/home/vagrant/wcbench/odltestconfig.py' )
 
-# print "copied successfully!"
+print "copied successfully!"
 # stdin,stdout,stderr= ssh.exec_command("cd /home/vagrant/wcbench/; python /home/vagrant/wcbench/runODLTest.py")
 # remotelog=open("c://RemoteExecution/remotelog.txt","w")
 # while not stdout.channel.exit_status_ready():
