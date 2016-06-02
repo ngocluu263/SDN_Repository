@@ -33,7 +33,7 @@ print "copied successfully!"
 
 stdin2,stdout2,stderr2=ssh.exec_command('git name-rev --name-only HEAD')
 r=stdout2.readlines()
-print "Result file found: " r)
+print r
 
 # if r[0].strip("\n") =="0" :
     # print "Results.csv created..copying the same back to local server."
