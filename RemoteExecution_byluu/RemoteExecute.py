@@ -31,9 +31,10 @@ print "copied successfully!"
             # remotelog.write(stdout.channel.recv(1024)) 
             # print '-------------------------------'
 
-# stdin2,stdout2,stderr2=ssh.exec_command('test -e /home/vagrant/results.csv; echo $?')
-# r=stdout2.readlines()
-# print "Result file found: "+r[0].strip("\n")
+stdin2,stdout2,stderr2=ssh.exec_command('test -e results.csv; echo $?')
+r=stdout2.readlines()
+print "Result file found: "+r[0].strip("\n")
+
 # if r[0].strip("\n") =="0" :
     # print "Results.csv created..copying the same back to local server."
     # sftp.get('/home/vagrant/results.csv','c://RemoteExecution/results.csv')
