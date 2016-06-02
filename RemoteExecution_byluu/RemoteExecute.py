@@ -65,6 +65,8 @@ print r[0].strip("\n")
 
 # #sftp.get('/home/vagrant/results.csv','c://RemoteExecution/results.csv')
 # sftp.close()
+time.sleep(2)
+stdin2,stdout2,stderr2=ssh.exec_command('sudo reboot')
 ssh.close()
 time.sleep(1)
 sys.exit(exitcode)
