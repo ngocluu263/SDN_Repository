@@ -12,9 +12,9 @@ ssh.connect(config.vmip,port=22, username=config.vmusername, password=config.vmp
 
 print "connected successfully!"
 exitcode=1
-sftp = ssh.open_sftp()
-print sftp
-sftp.put('results.csv','/home/pi/results.csv' )
+# sftp = ssh.open_sftp()
+# print sftp
+# sftp.put('results.csv','/home/pi/results.csv' )
 # sftp.put('c://RemoteExecution/odltestconfig.py','/home/vagrant/wcbench/odltestconfig.py' )
 
 print "copied successfully!"
@@ -33,7 +33,7 @@ print "copied successfully!"
 
 stdin2,stdout2,stderr2=ssh.exec_command('sudo git --git-dir=/root/cci-recite/.git name-rev --name-only HEAD')
 r=stdout2.readlines()
-print r
+print r[0].strip("\n")
 
 # if r[0].strip("\n") =="0" :
     # print "Results.csv created..copying the same back to local server."
