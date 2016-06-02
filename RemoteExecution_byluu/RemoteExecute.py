@@ -42,7 +42,7 @@ r=stdout2.readlines()
 print r[0].strip("\n")
 
 # Check current version
-stdin2,stdout2,stderr2=ssh.exec_command('sudo git --git-dir=/root/cci-recite/.git name-rev --name-only HEAD')
+stdin2,stdout2,stderr2=ssh.exec_command('sudo git --git-dir=/root/cci-recite/.git name-rev --name-only HEAD && sudo git --git-dir=/root/cci-recite/.git pull)
 r=stdout2.readlines()
 print r[0].strip("\n")
 
