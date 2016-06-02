@@ -31,6 +31,17 @@ print "copied successfully!"
             # remotelog.write(stdout.channel.recv(1024)) 
             # print '-------------------------------'
 
+# Check current version
+stdin2,stdout2,stderr2=ssh.exec_command('sudo git --git-dir=/root/cci-recite/.git name-rev --name-only HEAD')
+r=stdout2.readlines()
+print r[0].strip("\n")
+
+# Check current version
+stdin2,stdout2,stderr2=ssh.exec_command('sudo git --git-dir=/root/cci-recite/.git checkout R-1.7.0')
+r=stdout2.readlines()
+print r[0].strip("\n")
+
+# Check current version
 stdin2,stdout2,stderr2=ssh.exec_command('sudo git --git-dir=/root/cci-recite/.git name-rev --name-only HEAD')
 r=stdout2.readlines()
 print r[0].strip("\n")
