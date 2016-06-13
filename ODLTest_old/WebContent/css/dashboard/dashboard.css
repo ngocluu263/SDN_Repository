@@ -1,8 +1,0 @@
-#dashboard_menu_list > li > a.active{
-	background-color:#337ab7;
-    color:#fff;
-    line-height:25px;
-    border: 1px solid black;
-	border-radius: 5px;
-	//margin-top: 10px;
-}
